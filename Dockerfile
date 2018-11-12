@@ -1,14 +1,16 @@
 FROM bpinaya/robond-docker
 
 #RUN apt-get update   to be fixed
-RUN sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-RUN sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-RUN sudo apt-get update
+
+RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+RUN apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+RUN rm /etc/apt/sources.list.d/arc*
+RUN apt-get update
 RUN apt-get install -y vim
 RUN apt-get install -y ros-kinetic-qt-build
 RUN apt-get install -y ros-kinetic-pcl-ros
 RUN apt-get install -y qt4-dev-tools
-RUN qpt-get install -y ros-kinetic-pcl-ros
-RUN qpt-get install -y ros-kinetic-qt-ros
+RUN apt-get install -y ros-kinetic-pcl-ros
+RUN apt-get install -y ros-kinetic-qt-ros
 
 
