@@ -14,6 +14,7 @@ RUN apt-get install -y ros-kinetic-pcl-ros
 RUN apt-get install -y qt4-dev-tools
 RUN apt-get install -y ros-kinetic-pcl-ros
 RUN apt-get install -y ros-kinetic-qt-ros
+RUN apt-get install -y ros-kinetic-opencv
 RUN apt-get install -y ros-kinetic-opencv-apps
 RUN apt-get install -y libopencv-dev
 
