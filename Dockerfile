@@ -14,8 +14,9 @@ RUN apt-get install -y ros-kinetic-pcl-ros
 RUN apt-get install -y qt4-dev-tools
 RUN apt-get install -y ros-kinetic-pcl-ros
 RUN apt-get install -y ros-kinetic-qt-ros
-RUN apt-get install -y ros-kinetic-opencv
-RUN apt-get install -y ros-kinetic-opencv-apps
+RUN apt-get install -y ros-kinetic-opencv3
+#RUN apt-get install -y ros-kinetic-opencv-apps
 RUN apt-get install -y libopencv-dev
+RUN git clone https://github.com/lucasw/rviz_textured_quads.git /home/ubuntu/ros_ws/src/rviz_textured_quad
 
 
